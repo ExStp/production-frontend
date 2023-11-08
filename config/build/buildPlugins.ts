@@ -4,7 +4,7 @@ import { BuildOptions } from "./types/config";
 
 export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstance[] => {
 	const { mode, paths } = options;
-	
+
 	return [
 		new HtmlWebpackPlugin({
 			template: paths.html,
