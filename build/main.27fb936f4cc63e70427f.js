@@ -1,1 +1,0 @@
-(()=>{"use strict";document.getElementById("rootBtn").addEventListener("click",(function(e){e.preventDefault(),console.log("hello andrey! !")}))})();
