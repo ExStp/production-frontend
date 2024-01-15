@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
-import { RoutePaths } from "shared/config/routeConfig/routeConfig";
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./Navbar.module.scss";
+import { RoutePath } from "shared/config/routeConfig/routeConfig";
+import { AppLink, AppLinkTheme } from "shared/ui/AppLink";
+import { ThemeSwitcher } from "widgets/ThemeSwitcher/ui/ThemeSwitcher";
 
 interface NavbarProps {
 	className?: string;
@@ -10,8 +11,19 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => {
 	return (
 		<div className={classNames(cls.navbar, {}, [className])}>
-			<Link to={RoutePaths.main}>Главная</Link>
-			<Link to={RoutePaths.about}>О сайте</Link>
+			<ThemeSwitcher />
+			<div className={cls.links}>
+				<AppLink
+					theme={AppLinkTheme.SECONDARY}
+					to={RoutePath.main}
+					className={cls.mainLink}
+				>
+					Главная
+				</AppLink>
+				<AppLink theme={AppLinkTheme.RED} to={RoutePath.about}>
+					О сайте
+				</AppLink>
+			</div>
 		</div>
 	);
 };
