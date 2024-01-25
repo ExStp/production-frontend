@@ -1,4 +1,7 @@
 {
 	"Тестовый пример": "Test example",
-  "Сменить язык": "Change language"
+	"Сменить язык": "Change language",
+	"Свернуть": "Collapse",
+	"Развернуть": "Expand",
+	"Загрузка": "Loading"
 }
